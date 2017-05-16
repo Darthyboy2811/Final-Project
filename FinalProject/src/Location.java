@@ -22,8 +22,17 @@ public class Location implements Comparable<Location>
 	
 	public int compareTo(Location other)
 	{
-		return 0;
+		if (getRow() < other.getRow())
+            return -1;
+        if (getRow() > other.getRow())
+            return 1;
+        if (getCol() < other.getCol())
+            return -1;
+        if (getCol() > other.getCol())
+            return 1;
+        return 0;
 	}
+	
 	public Location getAdjacentLocation(int direction)
 	{
 		if (direction == 45)
