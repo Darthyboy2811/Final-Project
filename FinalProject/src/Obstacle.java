@@ -1,22 +1,47 @@
 
 public class Obstacle implements Encounterable
 {
-	private boolean touched;
-	private Player thing;
+	private int len, wid, x, y;
+	private Location loc;
+	private ArrayList<Location> arr;
 	
-	public Obstacle(Player thing1)
+	public Obstacle(int xPoint, int yPoint, int Length, int Width)
 	{
-		touched = false;
-		thing = thing1;
+		len = Length;
+		wid = Width;
+		x = xPoint;
+		y = yPoint;
+		loc = new Location(x,y);
 	}
 	
-	public boolean isTouching()
+	public int getWidth()
 	{
-		if (thing.getAdjacentLocation().equals(thing.getLoc()) )
-		{
-			touched = true;
-		}
-		return touched;
+		return wid;
+	}
+	
+	public int getLength()
+	{
+		return len;
+	}
+	
+	public int getX()
+	{
+		return x;
+	}
+	
+	public int getY()
+	{
+		return y;
+	}
+	
+	public Location getLocation()
+	{
+		return loc;
+	}
+	
+	public void putSelfInGrid(Map<Location> grid, Location loc)
+	{
+		
 	}
 	
 	public void interact()
