@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 
 public class Obstacle implements Encounterable
 {
@@ -47,6 +49,12 @@ public class Obstacle implements Encounterable
 	public void interact()
 	{
 		
+	}
+
+	@Override
+	public boolean isTouching() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }
