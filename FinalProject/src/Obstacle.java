@@ -1,60 +1,35 @@
-import java.util.ArrayList;
 
-
-public class Obstacle implements Encounterable
+public class Obstacle extends Polygon implements Encounterable
 {
-	private int len, wid, x, y;
-	private Location loc;
-	private ArrayList<Location> arr;
+	private int[] x, y;
+	private int n;
 	
-	public Obstacle(int xPoint, int yPoint, int Length, int Width)
+	public Obstacle(int[] xPoint, int[] yPoint, int vert)
 	{
-		len = Length;
-		wid = Width;
+		super(xPoint, yPoint, vert);
 		x = xPoint;
 		y = yPoint;
-		loc = new Location(x,y);
+		n = vert;
 	}
 	
-	public int getWidth()
-	{
-		return wid;
-	}
-	
-	public int getLength()
-	{
-		return len;
-	}
-	
-	public int getX()
+	public int[] getX()
 	{
 		return x;
 	}
 	
-	public int getY()
+	public int[] getY()
 	{
 		return y;
 	}
 	
-	public Location getLocation()
+	public int getVertices()
 	{
-		return loc;
+		return n;
 	}
 	
-	public void putSelfInGrid(Map<Location> grid, Location loc)
+	public void putSelfInGrid(Map grid, Location loc)
 	{
-		
-	}
-	
-	public void interact()
-	{
-		
-	}
-
-	@Override
-	public boolean isTouching() {
-		// TODO Auto-generated method stub
-		return false;
+		grid.put(loc, new Obstacle(x,y,n));
 	}
 	
 }
