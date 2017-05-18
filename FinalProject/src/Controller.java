@@ -1,7 +1,12 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
-public class Controller 
+
+public class Controller
 {
-	private int myTimer;
+
 	private Player myPlayer;
 	private GUI myGUI;
 	private ArrayList<Location> myLocs;
@@ -11,15 +16,13 @@ public class Controller
 		myPlayer = p;
 		myGUI = g;
 		myLocs = locs;
-		myTimer = 0;
-		
+		g.addKeyListener(new KeyHandler());
 	}
+	
+	
 
-	public int updateTimer()
-	{
-		myTimer++;
-		return myTimer;
-	}
+	
+	
 	
 	
 }
