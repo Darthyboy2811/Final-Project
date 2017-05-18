@@ -1,16 +1,16 @@
 
-public class Map 
+public class Map<E>
 {
+	private Object[][] MapDisplay;
 	
-	
-	public Map()
+	public Map(int numRows, int numCols)
 	{
-		Location [][] MapDisplay = new Location [30][30];
+		MapDisplay = new Object [numRows][numCols];
 	}
 	
-	public void readMap()
+	public E put(Location loc, Object ob)
 	{
-		
+		MapDisplay[loc.getRow()][loc.getCol()] = ob;
+		return null;
 	}
-	
 }
