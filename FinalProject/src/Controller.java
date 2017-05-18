@@ -26,6 +26,7 @@ public class Controller implements KeyListener
 	public void keyPressed(KeyEvent e) 
 	{
 		if (e.getKeyCode() == KeyEvent.VK_UP);
+		myPlayer.jump();
 		
 	}
 
@@ -41,6 +42,11 @@ public class Controller implements KeyListener
 	{
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public void updateScreen()
+	{
+		//Figure out once GUI has been at least partially completed.
 	}
 	
 	
