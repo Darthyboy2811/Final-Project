@@ -3,8 +3,10 @@ public class Map
 {
 	private Object [][] MapDisplay;
 	
+	
 	public Map(int numRows, int numCols)
 	{
+	
 		MapDisplay = new Object [numRows][numCols];
 	}
 	
@@ -18,4 +20,24 @@ public class Map
 	{
 		MapDisplay[loc.getRow()][loc.getCol()] = null;
 	}
+	
+	public Location getLocation(Object ob)
+	{
+		for (int row = 0; row < MapDisplay.length;)
+		{
+			for (int col = 0; col < MapDisplay[0].length;)
+			{
+				if(MapDisplay[row][col] == ob)
+				{
+					return new Location(row, col);
+					
+				}
+				
+			}
+		}
+		return null;
+	}
+
+
+	
 }
