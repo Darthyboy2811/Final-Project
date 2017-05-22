@@ -1,5 +1,5 @@
-
-public class Obstacle extends Polygon implements Encounterable
+import java.awt.Polygon;
+public class Obstacle implements Encounterable
 {
 	private int[] x, y;
 	private int n;
