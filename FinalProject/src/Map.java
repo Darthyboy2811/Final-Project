@@ -37,6 +37,27 @@ public class Map
 		}
 		return null;
 	}
+	
+	public void updateArray()
+	{
+		for (int row = 0; row < MapDisplay.length;)
+		{
+			for (int col = 0; col < MapDisplay[0].length;)
+			{
+				if(col == 0)
+					MapDisplay[row][col] = null;
+				else
+					{
+					MapDisplay[row][col-1] = MapDisplay[row][col];
+					MapDisplay[row][col] = null;
+					}
+			}
+		}
+			
+		
+		
+	
+	}
 
 
 	
