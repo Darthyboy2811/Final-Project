@@ -1,5 +1,5 @@
 
 public interface Encounterable 
 {
-public boolean isTouching();
+public void putSelfInGrid(Map grid, Location loc);
 }
