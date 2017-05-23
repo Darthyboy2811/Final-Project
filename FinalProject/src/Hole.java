@@ -2,6 +2,7 @@
 public class Hole extends Floor
 {
 	private int FailCount;
+	private Floor flo;
 
 
 public Hole(Location loc)

@@ -3,21 +3,21 @@ import java.awt.event.*;    // access to WindowAdapter, WindowEvent
 
 import javax.swing.*;
 
-public class GuiForGame extends JFrame implements ActionListener
+public class GUI extends JFrame implements ActionListener
 {
 	//Instance variables
 	private Image runner;
-	private Image counter;
+	private int counter;
 	private int runnerX, runnerY;
 	
 	//Constructor
-	public GuiForGame()
+	public GUI()
 	{
 		super("Game name here");
 		
 		ClassLoader clder = this.getClass().getClassLoader();
-		ImageIcon runnerIcon = new ImageIcon(clder.getResource("runner.gif"));
-		//runner = runnerIcon.getImage();
+		ImageIcon runnerIcon = new ImageIcon(clder.getResource("e5e33b7e37fd8a61bac7b658b5e9428d_funny-running-man-gifs-running-man-gif-clipart_300-300.gif"));
+	runner = runnerIcon.getImage();
 		
 		//Allows for exit from game
 		addWindowListener(new java.awt.event.WindowAdapter()
@@ -59,9 +59,10 @@ public class GuiForGame extends JFrame implements ActionListener
 		
 		System.out.println("time is" + counter);
 	}
+	}
 	
 	public static void main(String[] args)
 	{
-		GuiForGame application = new GuiForGame();
+		GUI application = new GUI();
 	}
 }
